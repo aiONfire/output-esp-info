@@ -48,6 +48,10 @@ void setup()
   chipId.toUpperCase();
 
   Serial.printf("Chip id: %s\n", chipId.c_str());
+
+  Serial.printf("XTAL Freq: %d [MHz]\n", getXtalFrequencyMhz());
+  Serial.printf("CPU Freq: %d [MHz]\n", getCpuFrequencyMhz());
+  Serial.printf("APB Freq: %d [MHz]\n", getApbFrequency() / 1000000);
 }
 
 void loop()
